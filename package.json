@@ -1,12 +1,15 @@
 {
   "name": "@goulvenc/typescript-date-picker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Project 14 of the OpenClassrooms - Front End Developer - course ",
   "homepage": "https://github.com/tofusoup429/react-component-module-frame",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "tsc"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/react": ">=17.0.5",
