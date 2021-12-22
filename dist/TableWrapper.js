@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableWrapper = void 0;
 const react_1 = __importDefault(require("react"));
 const react_2 = require("react");
 const SelectMaxEntries_1 = __importDefault(require("./components/SelectMaxEntries"));
@@ -40,4 +41,4 @@ function TableWrapper({ id, cols, items }) {
             react_1.default.createElement(EntriesCounter_1.default, { resultLength: resultLength, maxEntries: maxEntries, currentPage: currentPage }),
             react_1.default.createElement(TablePagination_1.default, { resultLength: resultLength, maxEntries: maxEntries, currentPage: currentPage, setFunction: setCurrentPage }))));
 }
-exports.default = TableWrapper;
+exports.TableWrapper = TableWrapper;
