@@ -9,7 +9,7 @@ import TablePagination from "./components/TablePagination"
 /**
  * Wrap together our table and some useful tools like research or filters
  */
-export default function TableWrapper({id, cols, items}: Props) {
+export function TableWrapper({id, cols, items}: Props) {
   // store all useful information
   const [query, setQuery] = useState("")
   const [maxEntries, setMaxEntries] = useState(10)
