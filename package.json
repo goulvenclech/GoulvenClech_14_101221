@@ -1,6 +1,6 @@
 {
   "name": "@goulvenc/typescript-table",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Project 14 of the OpenClassrooms - Front End Developer - course ",
   "homepage": "https://github.com/GoulvenC/GoulvenClech_14_101221",
   "main": "dist/index.js",
