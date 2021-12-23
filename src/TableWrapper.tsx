@@ -17,7 +17,6 @@ export function TableWrapper({id, cols, items}: Props) {
   const [resultLength, setResultLength] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
   useEffect(() => {
-    console.log(maxEntries + " " + currentPage + " " + resultLength)
     // filter results using the research query
     const filteredItems = items.filter(properties => 
       properties.some(property => property.includes(query)))
@@ -25,7 +24,6 @@ export function TableWrapper({id, cols, items}: Props) {
     // Slice results using the max entries limit & the current page
     const slicedItems = filteredItems.slice((maxEntries*currentPage-maxEntries), maxEntries*currentPage)
     setResults(slicedItems)
-    console.log(maxEntries + " " + currentPage + " " + resultLength)
   }, [query, maxEntries, currentPage])
   return(
     <section>

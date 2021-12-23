@@ -22,14 +22,12 @@ function TableWrapper({ id, cols, items }) {
     const [resultLength, setResultLength] = react_2.useState(0);
     const [currentPage, setCurrentPage] = react_2.useState(1);
     react_2.useEffect(() => {
-        console.log(maxEntries + " " + currentPage + " " + resultLength);
         // filter results using the research query
         const filteredItems = items.filter(properties => properties.some(property => property.includes(query)));
         setResultLength(filteredItems.length);
         // Slice results using the max entries limit & the current page
         const slicedItems = filteredItems.slice((maxEntries * currentPage - maxEntries), maxEntries * currentPage);
         setResults(slicedItems);
-        console.log(maxEntries + " " + currentPage + " " + resultLength);
     }, [query, maxEntries, currentPage]);
     return (react_1.default.createElement("section", null,
         react_1.default.createElement("h2", { className: "sr-only" }, id),

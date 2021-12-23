@@ -5,12 +5,10 @@ import { SetStateAction } from "react"
  */
 export default function TablePagination({resultLength, maxEntries, currentPage, setFunction}: Props) {
   const handleNavigate = (destinationPage: number) => {
-    console.log(currentPage + " => " +destinationPage)
     setFunction(destinationPage)
   }
   return(
     <div className="ml-auto flex gap-4">
-      {console.log(Math.floor(resultLength / maxEntries) + 1)}
       { // if current page is not 1, display "previous page" button
         currentPage !== 1 ? 
           <button onClick={() => {handleNavigate(currentPage - 1)}} >

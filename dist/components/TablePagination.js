@@ -9,11 +9,9 @@ const react_1 = __importDefault(require("react"));
  */
 function TablePagination({ resultLength, maxEntries, currentPage, setFunction }) {
     const handleNavigate = (destinationPage) => {
-        console.log(currentPage + " => " + destinationPage);
         setFunction(destinationPage);
     };
     return (react_1.default.createElement("div", { className: "ml-auto flex gap-4" },
-        console.log(Math.floor(resultLength / maxEntries) + 1),
         currentPage !== 1 ?
             react_1.default.createElement("button", { onClick: () => { handleNavigate(currentPage - 1); } }, "Previous")
             : "",
